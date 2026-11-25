@@ -1,0 +1,63 @@
+
+> petalwake-signaling@1.0.0 test
+> node --test test/*.test.mjs
+
+TAP version 13
+# Subtest: HTTP game, health, and upgrade routes
+ok 1 - HTTP game, health, and upgrade routes
+  ---
+  duration_ms: 30.809389
+  type: 'test'
+  ...
+# Subtest: 4 peers, 6 bilateral edges, stable roster, 5th denied, no host dependency
+ok 2 - 4 peers, 6 bilateral edges, stable roster, 5th denied, no host dependency
+  ---
+  duration_ms: 243.297969
+  type: 'test'
+  ...
+# Subtest: concurrent pending members activate only as a full mesh
+ok 3 - concurrent pending members activate only as a full mesh
+  ---
+  duration_ms: 96.892328
+  type: 'test'
+  ...
+# Subtest: room isolation, forged sender, relay ICE, unknown game packets and binary are blocked
+ok 4 - room isolation, forged sender, relay ICE, unknown game packets and binary are blocked
+  ---
+  duration_ms: 98.471885
+  type: 'test'
+  ...
+# Subtest: failed pending join leaves active players untouched; active failure removes reporter
+ok 5 - failed pending join leaves active players untouched; active failure removes reporter
+  ---
+  duration_ms: 53.166794
+  type: 'test'
+  ...
+# Subtest: invalid room, nonexistent room, timeouts, empty room deletion
+ok 6 - invalid room, nonexistent room, timeouts, empty room deletion
+  ---
+  duration_ms: 375.151582
+  type: 'test'
+  ...
+# Subtest: cross-origin upgrade rejected; heartbeat removes unresponsive socket
+ok 7 - cross-origin upgrade rejected; heartbeat removes unresponsive socket
+  ---
+  duration_ms: 82.082641
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1100.769309
+
+Environment: Node 22.16.0. npm registry DNS blocked (EAI_AGAIN).
+Integration tests used the installed Playwright bundled ws implementation via TEST_WS_BUNDLE.
+Actual browser WebRTC smoke test: NOT RUN TO COMPLETION; Chromium blocked local navigation (ERR_BLOCKED_BY_ADMINISTRATOR).
+Render deployment: not performed. Public internet / cross-NAT WebRTC: not verified.
+Original HTML SHA256: 599def6d32e7c648f09b7930f3df0cf77b867abc6b362225c534d1eeaee8f414
+Packaged HTML SHA256: 599def6d32e7c648f09b7930f3df0cf77b867abc6b362225c534d1eeaee8f414
